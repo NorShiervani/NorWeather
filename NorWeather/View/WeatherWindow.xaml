@@ -8,11 +8,46 @@
         Height="495" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.5*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="3.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3.5*"/>
         </Grid.RowDefinitions>
-        <Label Foreground="Purple" Grid.Row="0" Content="NorWeather" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" FontFamily="Arame"></Label>
+        <TextBlock Foreground="Purple" 
+                   Grid.Row="0" 
+                   Text="NorWeather" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   FontSize="45" 
+                   FontFamily="Arame"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="1">
+                <Border BorderBrush="Purple" BorderThickness="1"/>
+                <ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0 5">
+                                <TextBlock Text="Date"
+                                       FontSize="15"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Minimum"
+                                       Margin="0 0 5 0"
+                                       FontSize="15"/>
+                                    <TextBlock Text="Maximum"
+                                       Margin="0 0 5 0"
+                                       FontSize="15"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
         <Grid Grid.Row="2" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -20,18 +55,32 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="1" FontSize="20" Width="130" Height="40" Foreground="Purple" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
-            <TextBox Grid.Row="1" Grid.Column="1" FontSize="15" Foreground="Purple" Height="25"></TextBox>
-            <Label Grid.Row="2" Grid.Column="1" Content="2" FontSize="20" Width="130" Height="40" Foreground="Purple" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
-            <TextBox Grid.Row="3" Grid.Column="1" FontSize="15" Foreground="Purple" Height="25"></TextBox>
-            <Button Grid.Row="4" Grid.Column="1" Content="Search" FontSize="15" Width="100" Height="30" Background="Purple" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+            <TextBlock Grid.Row="0" 
+                       Grid.Column="1" 
+                       Text="City" FontSize="20" 
+                       Width="130" Height="40" 
+                       Foreground="Purple" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top"/>
+            <TextBox Grid.Row="1" 
+                     Grid.Column="1" 
+                     FontSize="15" 
+                     Foreground="Purple" 
+                     Height="25"/>
+            <Button Grid.Row="4" 
+                    Grid.Column="1" 
+                    Content="Search" 
+                    FontSize="15" 
+                    Width="100" 
+                    Height="30" 
+                    Background="Purple" 
+                    Foreground="White"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Bottom"/>
         </Grid>
-        
     </Grid>
 </Window>
