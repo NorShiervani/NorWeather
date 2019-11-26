@@ -8,9 +8,9 @@
         Height="495" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="3.5*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Foreground="Purple" 
                    Grid.Row="0" 
@@ -26,7 +26,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" Margin="10">
                 <Border BorderBrush="Purple" BorderThickness="1"/>
                 <ListView>
                     <ListView.ItemTemplate>
@@ -80,7 +80,7 @@
                     Background="Purple" 
                     Foreground="White"
                     HorizontalAlignment="Right" 
-                    VerticalAlignment="Bottom"/>
+                    VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>
